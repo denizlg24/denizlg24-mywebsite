@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Light 300
+Light 300 Italic
+Regular 400
+Regular 400 Italic
+Medium 500
+Medium 500 Italic
+SemiBold 600
+SemiBold 600 Italic
+Bold 700
+Bold 700 Italic
+ExtraBold 800
+ExtraBold 800 Italic
+Black 900
+Black 900 Italic*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+h1{
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.header-main-container{
+    position: fixed;
+    top: 0;
+    height: 8%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 .3rem .3rem rgba(0,0,0,0);
+    display: flex;
+    align-items: center;
+    transition: all ease-in-out .3s;
+    z-index: 25;
+}
+
+.header-main-button{
+    position: relative;
+    left: 0;
+    margin-left: 1rem;
+    width: fit-content;
+    height: fit-content;
+    padding: .5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform ease-in-out .1s;
+}
+
+.header-main-button:hover{
+    transform: scale(1.1);
+}
+
+.header-main-button-gradient-text{
+    background: linear-gradient(to right,#1e08e0, rgb(126, 44, 158)); 
+    user-select: none;
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    
+}
+
+.navbar-holder{
+    position: relative; 
+    right: 0;
+    width: fit-content; 
+    height: fit-content; 
+    margin: auto; 
+    margin-right: 1rem; 
+    padding: .5rem; 
+    display: table;
+}
+ul#navbar {
+	list-style: none;
+    user-select: none;
+	}
+	ul#navbar li {
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: .7rem;
+        font-weight: 500;
+        font-size: 1.1rem;
+		display: inline;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+	}
+    ul#navbar li a:link{
+        text-decoration: none;
+        color: black;
+    }
+    ul#navbar li a:visited{
+        text-decoration: none;
+        color: black;
+    }
+    ul#navbar li a:active{
+        text-decoration: none;
+        color: black;
+    }
+    ul#navbar li a:hover{
+        text-decoration: none;
+        background: linear-gradient(to right,#1e08e0, #7e2c9e); 
+        -webkit-background-clip: text; 
+        background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+    }
+    ul#navbar li a#active-tab-indicator{
+        text-decoration: none;
+        background: linear-gradient(to right,#1e08e0, #7e2c9e); 
+        -webkit-background-clip: text; 
+        background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+    }
+
+.navbar-icon{
+    display: none;
+    cursor: pointer;
+    position: relative; 
+    right: 0; 
+    top: 50%; 
+    transform: translateY(-50%);
+    width: auto; 
+    height: 100%; 
+    margin: auto; 
+    margin-right: 1rem; 
+    padding: .5rem;  
+    transition: transform ease-in-out .1s;
+}
+
+.navbar-icon:hover{
+    transform: translateY(-50%) scale(1.1);
+}
+
+#holder-bg{
+    width: 100%;
+	background: white;
+    background-size: cover;
+	background-position: center center;
+    z-index: -10;
+    position: relative;
+    overflow-x: hidden;
+}
+#holder-bg canvas, #overlay {
+    position: absolute;
+  }
+
+  .profilePicture{
+    position: relative;
+    display: flex;
+    top: 25%;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0 .3rem .3rem rgba(0, 0, 0, .3);
+    width: auto;
+    height: auto;
+    max-height: 10rem;
+    max-width: 100rem;
+}
+.profileDesc{
+    position: relative;
+    display: inline;
+    top: 25%;
+    margin: auto;
+    margin-top: 10%;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+}
+.profileName{
+    font-size: 2.7rem;
+    font-weight: 800;
+}
+.profileSubtitle{
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+/*.profileLinks{
+    position: relative;
+    display: inline;
+    z-index: 99;
+    top: 25%;
+    margin: auto;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.profileLinksList{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 1rem;
+    margin-top: 0;
+    padding: 1rem;   
+}
+
+.profileLinksItem{
+    display: flex;
+    margin: auto;
+    padding: .2rem;
+}
+
+.profileLinksItemPicture{
+    max-height: 2rem;
+    max-width: 2rem;
+    height: auto;
+    width: auto;
+    transition: 0.1s ease-in;
+}
+.profileLinksItemPicture:hover{
+    transform: scale(1.3);
+}
+*/
+
+.about-me-main-holder{
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+}
+
+.about-me-left-holder{
+    float:left; 
+    height: 100%; 
+    width: 45%; 
+    margin-left: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding-right: 3rem; 
+    text-align: left; 
+    position: relative; 
+    display: block; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.about-me-picture-holder{
+    float: right; 
+    height: 100%; 
+    width: 45%; 
+    margin-right: 5rem; 
+    text-align: right; 
+    position: relative; 
+    display: block; 
+    justify-content: center; 
+    align-items: center; 
+    padding-top: .5rem; 
+    padding-bottom: .5rem;
+}
+
+.about-me-picture{
+    width: max-content; 
+    height: auto; 
+    max-width: 100%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1500px) {
+    .about-me-picture-holder{
+        display: none
+    }
+
+    .about-me-left-holder{
+        width: 100%;
+        float: none;
+        margin: 1.3rem;
+        padding: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .navbar-icon{
+        display: flex;
+    }
+
+    .navbar-holder{
+        display: none;
+    }
+    .profilePicture{
+        max-height: 7rem;
+        max-width: 7rem;
+    }
+    .profileName{
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+    .profileSubtitle{
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+}
+
+::-webkit-scrollbar{
+    height: 4px;
+    width: 4px;
+    background: #292929;
+}
+::-webkit-scrollbar-thumb:horizontal{
+    background: #292929;
+    border-radius: 10px;
+}

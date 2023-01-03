@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" onload='setHeader();'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Deniz Lopes Günes</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+</head>
+
+<header class="header-main-container">
+    <div class="header-main-button">
+        <h1 class="header-main-button-gradient-text" onclick="clickHome()">Deniz</h1>
+    </div>
+    <div class="navbar-holder">
+        <ul id="navbar">
+            <li onclick="clickNavbarIndicator(this,'holder-bg','Home | Deniz Lopes Günes')" data-indentifier="home-button"><a id="active-tab-indicator">Home</a></li>
+            <li onclick="clickNavbarIndicator(this,'about-me-trigger','About Me | Deniz Lopes Günes')" data-indentifier="about-button"><a >About Me</a></li>
+            <li onclick="clickNavbarIndicator(this,'my-skills-trigger','My Skills | Deniz Lopes Günes')" data-indentifier="skills-button"><a>My Skills</a></li>
+            <li onclick="clickNavbarIndicator(this,'portfolio-trigger','Portfolio | Deniz Lopes Günes')" data-indentifier="portfolio-button"><a>Portfolio</a></li>
+            <li onclick="clickNavbarIndicator(this,'contact-trigger','Contact Me | Deniz Lopes Günes')" data-indentifier="contact-button"><a>Contact Me</a></li>
+        </ul>
+    </div>
+
+
+    <img class="navbar-icon" src="icons/icons8-menu-squared-96.png" alt="Dropdown Menu Icon"> <!--mobile-->
+    
+    
+</header>
+
+<body onload='setHeader();' style="z-index: -10; position: relative;">
+    <div id="holder-bg">
+        <canvas id="bg-canvas"></canvas>
+        <span style="z-index: 99; position: relative;">
+            <img src="imgs/deniz.jpg" class="profilePicture" alt="Deniz's Profile Picture">
+            <div class="profileDesc">
+                <h1 class="profileName">Deniz Lopes Günes</h1>
+                <p class="profileSubtitle">Transforming ideas into digital reality</p>
+            </div>
+        </span>
+    </div>
+    
+
+    <!--<section style="height: 100vh; background-color: white;"></section> debug-->
+
+    <section style="height: auto; background-color: #C8B6E2;">
+        <section id="about-me-trigger"></section> 
+        <div class="about-me-main-holder">
+            <div class="about-me-left-holder">
+                    <h1 style="font-size: 3.5rem; ">Let's introduce myself.</h1>
+                    <br>
+                    <p style="font-size: 1.5rem; font-weight: 300;">Hi there! My name is Deniz Lopes Gunes and I am an 18-year-old from Portugal. I am currently studying for my Bachelor's degree in Informatics and Computing Engineering at FEUP (Faculdade de Engenharia da Universidade do Porto), and I am proud to say that I finished high school with an average of 19.3/20. In my spare time, I play handball for AAAS Associacao Atletica de Aguas Santas, a top handball team in the country for my age group. I am also fluent in Turkish, as my father is Turkish and I have a dual nationality. </p>
+                    <br>
+                    <p style="font-size: 1.5rem; font-weight: 300;">In addition to my love for sports and academics, I am also a keen learner and have received the Cambridge C1 Advanced (CAE) certificate. When I'm not studying or playing handball, I enjoy staying active and exploring new interests.</p>      
+            </div>
+            <div class="about-me-picture-holder">
+                <div>
+                    <img src="imgs/about-me.png" class="about-me-picture" alt="Cartoon of a programmer sitting down and coding on his laptop with a plant behind him.">
+                </div> 
+            </div>
+        </div>
+    </section>
+    <section style="height: 100vh; background-color:#A8A4CE;">
+        <section id="my-skills-trigger"></section>
+        <h1>MY SKILLS</h1>
+    </section>
+    <section style="height: 100vh; background-color: #7A86B6;">
+        <section id="portfolio-trigger"></section>
+        <h1>PORTFOLIO</h1>
+    </section>
+    <section style="height: 100vh; background-color: #495C83;">
+        <section id="contact-trigger"></section>
+        <h1>CONTACT ME</h1>
+    </section>
+</body>
+</html>
+<script src="index.js"></script>
