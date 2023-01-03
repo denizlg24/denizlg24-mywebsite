@@ -138,6 +138,64 @@ ul#navbar {
     transform: translateY(-50%) scale(1.1);
 }
 
+ul#navbar-mobile {
+	list-style: none;
+    user-select: none;
+	}
+	ul#navbar-mobile li {
+        margin: .5em;
+        padding: .5rem;
+        border-radius: .7rem;
+        font-weight: 500;
+        font-size: 1.1rem;
+		display: block;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+	}
+    ul#navbar-mobile li a:link{
+        text-decoration: none;
+        color: black;
+    }
+    ul#navbar-mobile li a:visited{
+        text-decoration: none;
+        color: black;
+    }
+    ul#navbar-mobile li a:active{
+        text-decoration: none;
+        color: black;
+    }
+    ul#navbar-mobile li a:hover{
+        text-decoration: none;
+        background: linear-gradient(to right,#1e08e0, #7e2c9e); 
+        -webkit-background-clip: text; 
+        background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+    }
+    ul#navbar-mobile li a#active-tab-indicator-mobile{
+        text-decoration: none;
+        background: linear-gradient(to right,#1e08e0, #7e2c9e); 
+        -webkit-background-clip: text; 
+        background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+    }
+
+.navbar-dropdown{
+    position: fixed; 
+    top: 0; 
+    padding: 0; 
+    padding-top: calc(100vh * 0.08); 
+    right: 0; 
+    background-color: rgb(250, 250, 250); 
+    border-bottom-left-radius: 1rem; 
+    border-bottom-right-radius: 1rem; 
+    height: auto; 
+    width: auto; 
+    display: none; 
+    box-shadow: 0 .3rem .3rem rgba(0,0,0,.3); 
+    transition: all ease-in-out .3s;
+}
+
 #holder-bg{
     width: 100%;
 	background: white;

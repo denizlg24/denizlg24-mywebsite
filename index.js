@@ -188,6 +188,7 @@ window.onbeforeunload = function () {
 }
 
 var currentActiveIndicator = document.getElementById("active-tab-indicator");
+var currentActiveIndicatormobile = document.getElementById("active-tab-indicator-mobile");
 document.addEventListener('scroll',setHeader);
 
 function setHeader(){
@@ -202,26 +203,27 @@ function setHeader(){
     }
 }
 
-const about_me = document.getElementById("about-me-trigger");
-var elementPosition_about_me = about_me.getBoundingClientRect().top;
-var offsetPosition_about_me = elementPosition_about_me + window.pageYOffset;
-
-
-const my_skills = document.getElementById("my-skills-trigger");
-var elementPosition_my_skills= my_skills.getBoundingClientRect().top;
-var offsetPosition_my_skills = elementPosition_my_skills + window.pageYOffset;
-
-const portfolio = document.getElementById("portfolio-trigger");
-var elementPosition_portfolio = portfolio.getBoundingClientRect().top;
-var offsetPosition_portfolio = elementPosition_portfolio + window.pageYOffset;
-
-const contact_me = document.getElementById("contact-trigger");
-var elementPosition_contact_me = contact_me.getBoundingClientRect().top;
-var offsetPosition_contact_me = elementPosition_contact_me + window.pageYOffset;
 
 
 document.addEventListener('scroll', () => {
-    console.log(offsetPosition_about_me,offsetPosition_my_skills,offsetPosition_portfolio,offsetPosition_contact_me);
+    if (document.getElementById("navdropdown").style.display === "none") {
+        const about_me = document.getElementById("about-me-trigger");
+        var elementPosition_about_me = about_me.getBoundingClientRect().top;
+        var offsetPosition_about_me = elementPosition_about_me + window.pageYOffset;
+
+
+        const my_skills = document.getElementById("my-skills-trigger");
+        var elementPosition_my_skills= my_skills.getBoundingClientRect().top;
+        var offsetPosition_my_skills = elementPosition_my_skills + window.pageYOffset;
+
+        const portfolio = document.getElementById("portfolio-trigger");
+        var elementPosition_portfolio = portfolio.getBoundingClientRect().top;
+        var offsetPosition_portfolio = elementPosition_portfolio + window.pageYOffset;
+
+        const contact_me = document.getElementById("contact-trigger");
+        var elementPosition_contact_me = contact_me.getBoundingClientRect().top;
+        var offsetPosition_contact_me = elementPosition_contact_me + window.pageYOffset;
+
     if (window.scrollY + (window.innerWidth*0.33) < offsetPosition_about_me){
         currentActiveIndicator.removeAttribute("id");
         clicker = document.querySelector('[data-indentifier="home-button"]');
@@ -257,6 +259,61 @@ document.addEventListener('scroll', () => {
         currentActiveIndicator = clicker.firstElementChild;
         document.title = "Contact Me | Deniz Lopes Günes";
     }
+}
+    if (document.getElementById("navdropdown").style.display === "block") {
+        const about_me = document.getElementById("about-me-trigger");
+        var elementPosition_about_me = about_me.getBoundingClientRect().top;
+        var offsetPosition_about_me = elementPosition_about_me + window.pageYOffset;
+
+
+        const my_skills = document.getElementById("my-skills-trigger");
+        var elementPosition_my_skills= my_skills.getBoundingClientRect().top;
+        var offsetPosition_my_skills = elementPosition_my_skills + window.pageYOffset;
+
+        const portfolio = document.getElementById("portfolio-trigger");
+        var elementPosition_portfolio = portfolio.getBoundingClientRect().top;
+        var offsetPosition_portfolio = elementPosition_portfolio + window.pageYOffset;
+
+        const contact_me = document.getElementById("contact-trigger");
+        var elementPosition_contact_me = contact_me.getBoundingClientRect().top;
+        var offsetPosition_contact_me = elementPosition_contact_me + window.pageYOffset;
+
+        if (window.scrollY + (window.innerWidth*0.33) < offsetPosition_about_me){
+            currentActiveIndicatormobile.removeAttribute("id");
+            clicker = document.querySelector('[data-indentifier="home-button-mobile"]');
+            clicker.firstElementChild.setAttribute("id","active-tab-indicator-mobile");
+            currentActiveIndicatormobile = clicker.firstElementChild;
+            document.title = "Home | Deniz Lopes Günes";
+        }
+        else if (window.scrollY + (window.innerWidth*0.08) + (about_me.clientHeight * 0.25) >= offsetPosition_about_me && window.scrollY + (window.innerWidth*0.08) + (my_skills.clientHeight * 0.25) < offsetPosition_my_skills){
+            currentActiveIndicatormobile.removeAttribute("id");
+            clicker = document.querySelector('[data-indentifier="about-button-mobile"]');
+            clicker.firstElementChild.setAttribute("id","active-tab-indicator-mobile");
+            currentActiveIndicatormobile = clicker.firstElementChild;
+            document.title = "About Me | Deniz Lopes Günes";
+        }
+        else if (window.scrollY + (window.innerWidth*0.08) + (my_skills.clientHeight * 0.25) >= offsetPosition_my_skills && window.scrollY + (window.innerWidth*0.08) + (portfolio.clientHeight * 0.25) < offsetPosition_portfolio){
+            currentActiveIndicatormobile.removeAttribute("id");
+            clicker = document.querySelector('[data-indentifier="skills-button-mobile"]');
+            clicker.firstElementChild.setAttribute("id","active-tab-indicator-mobile");
+            currentActiveIndicatormobile = clicker.firstElementChild;
+            document.title = "My Skills | Deniz Lopes Günes";
+        }
+        else if (window.scrollY+ (window.innerWidth*0.08) + (portfolio.clientHeight * 0.25) >= offsetPosition_portfolio && window.scrollY + (window.innerWidth*0.08) + (contact_me.clientHeight * 0.25)< offsetPosition_contact_me){
+            currentActiveIndicatormobile.removeAttribute("id");
+            clicker = document.querySelector('[data-indentifier="portfolio-button-mobile"]');
+            clicker.firstElementChild.setAttribute("id","active-tab-indicator-mobile");
+            currentActiveIndicatormobile = clicker.firstElementChild;
+            document.title = "Portfolio | Deniz Lopes Günes";
+        }
+        else if (window.scrollY + (window.innerWidth*0.08) + (contact_me.clientHeight * 0.25)>= offsetPosition_contact_me){
+            currentActiveIndicatormobile.removeAttribute("id");
+            clicker = document.querySelector('[data-indentifier="contact-button-mobile"]');
+            clicker.firstElementChild.setAttribute("id","active-tab-indicator-mobile");
+            currentActiveIndicatormobile = clicker.firstElementChild;
+            document.title = "Contact Me | Deniz Lopes Günes";
+        }
+    }
   })
 
 
@@ -274,6 +331,21 @@ function clickNavbarIndicator(clicker,stri,title) {
           behavior: "smooth" 
     });
 }
+function clickNavbarIndicatormobile(clicker,stri,title) {
+    currentActiveIndicatormobile.removeAttribute("id");
+    clicker.firstElementChild.setAttribute("id","active-tab-indicator-mobile");
+    currentActiveIndicatormobile = clicker.firstElementChild;
+    const element = document.getElementById(stri);
+    var headerOffset = (window.innerHeight * 0.08) -1;
+    var elementPosition = element.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    document.title = title;
+    window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth" 
+    });
+    clickNavbarIcon();
+}
 
 function clickHome(){
     currentActiveIndicator.removeAttribute("id");
@@ -283,5 +355,24 @@ function clickHome(){
     document.title = "Home | Deniz Lopes Günes";
     window.scrollTo(0, 0);
 }
+
+var toggledDropdown = false;
+function clickNavbarIcon(){
+    var navdropdown = document.getElementById("navdropdown");
+    toggledDropdown = !toggledDropdown;
+    if (toggledDropdown) {
+        navdropdown.style.display = "block";
+    }
+    else{
+        navdropdown.style.display = "none";
+    }
+}
+window.addEventListener("resize", function() {
+    if (window.matchMedia("(min-width: 990px)").matches) {
+        var navdropdown = document.getElementById("navdropdown");
+        toggledDropdown = false;
+        navdropdown.style.display = "none";
+    }
+  })
 
 

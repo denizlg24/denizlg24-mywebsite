@@ -26,10 +26,17 @@
             <li onclick="clickNavbarIndicator(this,'contact-trigger','Contact Me | Deniz Lopes Günes')" data-indentifier="contact-button"><a>Contact Me</a></li>
         </ul>
     </div>
+    <img class="navbar-icon" src="icons/icons8-menu-squared-96.png" alt="Dropdown Menu Icon" style="z-index: 15;" onclick="clickNavbarIcon()"> <!--mobile-->
 
-
-    <img class="navbar-icon" src="icons/icons8-menu-squared-96.png" alt="Dropdown Menu Icon"> <!--mobile-->
-    
+    <div id="navdropdown" class="navbar-dropdown">
+        <ul id="navbar-mobile">
+            <li onclick="clickNavbarIndicatormobile(this,'holder-bg','Home | Deniz Lopes Günes')" data-indentifier="home-button-mobile"><a id="active-tab-indicator-mobile">Home</a></li>
+            <li onclick="clickNavbarIndicatormobile(this,'about-me-trigger','About Me | Deniz Lopes Günes')" data-indentifier="about-button-mobile"><a >About Me</a></li>
+            <li onclick="clickNavbarIndicatormobile(this,'my-skills-trigger','My Skills | Deniz Lopes Günes')" data-indentifier="skills-button-mobile"><a>My Skills</a></li>
+            <li onclick="clickNavbarIndicatormobile(this,'portfolio-trigger','Portfolio | Deniz Lopes Günes')" data-indentifier="portfolio-button-mobile"><a>Portfolio</a></li>
+            <li onclick="clickNavbarIndicatormobile(this,'contact-trigger','Contact Me | Deniz Lopes Günes')" data-indentifier="contact-button-mobile"><a>Contact Me</a></li>
+        </ul>
+    </div>
     
 </header>
 
