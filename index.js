@@ -206,7 +206,7 @@ function setHeader(){
 
 
 document.addEventListener('scroll', () => {
-    if (document.getElementById("navdropdown").style.display === "none") {
+    if (!(window.matchMedia('(max-device-width: 990px)').matches)) {
         const about_me = document.getElementById("about-me-trigger");
         var elementPosition_about_me = about_me.getBoundingClientRect().top;
         var offsetPosition_about_me = elementPosition_about_me + window.pageYOffset;
@@ -260,7 +260,7 @@ document.addEventListener('scroll', () => {
         document.title = "Contact Me | Deniz Lopes Günes";
     }
 }
-    if (document.getElementById("navdropdown").style.display === "block") {
+    else{
         const about_me = document.getElementById("about-me-trigger");
         var elementPosition_about_me = about_me.getBoundingClientRect().top;
         var offsetPosition_about_me = elementPosition_about_me + window.pageYOffset;
@@ -348,10 +348,17 @@ function clickNavbarIndicatormobile(clicker,stri,title) {
 }
 
 function clickHome(){
-    currentActiveIndicator.removeAttribute("id");
-    clicker = document.querySelector('[data-indentifier="home-button"]');
-    clicker.firstElementChild.setAttribute("id","active-tab-indicator");
-    currentActiveIndicator = clicker.firstElementChild;
+    if (!(window.matchMedia('(max-device-width: 990px)').matches)) {
+        clickermobile = document.querySelector('[data-indentifier="home-button-mobile"]');
+        clickermobile.firstElementChild.setAttribute("id","active-tab-indicator");
+        currentActiveIndicatormobile = clickermobile.firstElementChild;
+    }
+    else{
+        currentActiveIndicator.removeAttribute("id");
+        clicker = document.querySelector('[data-indentifier="home-button"]');
+        clicker.firstElementChild.setAttribute("id","active-tab-indicator-mobile");
+    }
+    
     document.title = "Home | Deniz Lopes Günes";
     window.scrollTo(0, 0);
 }
