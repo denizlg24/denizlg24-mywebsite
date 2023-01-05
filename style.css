@@ -325,6 +325,14 @@ ul#navbar-mobile {
     margin: auto;
 }
 
+.my-skills-main-holder{
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+}
+
 @media only screen and (max-width: 1500px) {
     .about-me-picture-holder{
         display: none
