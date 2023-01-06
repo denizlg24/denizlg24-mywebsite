@@ -415,7 +415,7 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
     text-align: justify;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1420px) {
     .my-skills-grid-holder .skill{
         position: relative;
         margin: auto;
