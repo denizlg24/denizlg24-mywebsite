@@ -60,7 +60,14 @@
             <div class="about-me-left-holder">
                     <h1 style="font-size: 3.5rem; ">Let's introduce myself.</h1>
                     <br>
-                    <p style="font-size: 1.5rem; font-weight: 300;">Hi there! My name is Deniz Lopes Gunes and I am an 18-year-old from Portugal. I am currently studying for my Bachelor's degree in Informatics and Computing Engineering at FEUP (Faculdade de Engenharia da Universidade do Porto), and I am proud to say that I finished high school with an average of 19.3/20. In my spare time, I play handball for AAAS Associacao Atletica de Aguas Santas, a top handball team in the country for my age group. I am also fluent in Turkish, as my father is Turkish and I have a dual nationality. </p>
+                    <p style="font-size: 1.5rem; font-weight: 300;">Hi there! My name is Deniz Lopes Gunes and I am an <script>
+                        var birthDate = new Date("04/24/2004");
+                        var currentDate = new Date();
+                        var ageInMilliseconds = currentDate - birthDate;
+                        var ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+                        var age = Math.floor(ageInYears);
+                        document.write(age);
+                      </script>-year-old from Portugal. I am currently studying for my Bachelor's degree in Informatics and Computing Engineering at FEUP (Faculdade de Engenharia da Universidade do Porto), and I am proud to say that I finished high school with an average of 19.3/20. In my spare time, I play handball for AAAS Associacao Atletica de Aguas Santas, a top handball team in the country for my age group. I am also fluent in Turkish, as my father is Turkish and I have a dual nationality. </p>
                     <br>
                     <p style="font-size: 1.5rem; font-weight: 300;">In addition to my love for sports and academics, I am also a keen learner and have received the Cambridge C1 Advanced (CAE) certificate. When I'm not studying or playing handball, I enjoy staying active and exploring new interests.</p>      
             </div>
@@ -75,7 +82,7 @@
         <section id="my-skills-trigger"></section>
         <div class="my-skills-main-holder">
             <div class="my-skills-main-title">
-                <h1>What am I capable of doing?</h1>
+                <h1>What do I bring to the table?</h1>
             </div>
             <div class="my-skills-subtitle">
                 <p>These are my most developed skills, take a look and check if they align with what you need.</p>
@@ -128,9 +135,32 @@
             </div>
         </div>
     </section>
-    <section style="height: 100vh; background:linear-gradient(to bottom, #7A86B6 0%, #7A86B6 15%, #495C83 95%);">
+    <section style="overflow-y: hidden; height: auto; margin: 0; background:linear-gradient(to bottom, #7A86B6 0%, #7A86B6 15%, #495C83 95%);">
         <section id="portfolio-trigger"></section>
-        <h1>PORTFOLIO</h1>
+        <h1 style="width: 100%; text-align: center; padding-top: 4rem; padding-bottom: 2rem; color: white; font-size: 3.5rem;">Let me tell you more about me and my work.</h1>
+        <div class="timeline">
+            <ul>
+                <li>
+                    <div class="content">
+                      <h3>My First Steps in Academic Excelence</h3>
+                      <p>In 2014, at the end of my fourth grade of primary school, I was awarded an excellence award for my outstanding academic performance. This was a proud moment for me, as it recognized the hard work and dedication I had put into my studies. I knew that this was just the beginning, and I was motivated to continue striving for excellence in all my future endeavors.</p>
+                    </div>
+                    <div class="time">
+                      <h4>June 2014</h4>
+                    </div>
+                  </li>
+                <li>
+                <div class="content">
+                  <h3>The Beginning of My Journey</h3>
+                  <p>On April 24th, 2004, I was born in Cedofeita, Porto, Portugal. At the time, my father was working in London as an asset manager, while my mother was a university teacher in Portugal. As I entered the world, I was greeted with love and excitement, marking the start of my journey through life. Though I was just a newborn, I had the potential to accomplish anything I set my mind to, and my family was there to support me every step of the way.</p>
+                </div>
+                <div class="time">
+                  <h4>24th April 2004</h4>
+                </div>
+                </li>
+              <div style="clear:both;"></div>
+            </ul>
+          </div>
     </section>
     <section style="height: 100vh; background-color: #495C83;">
         <section id="contact-trigger"></section>
