@@ -174,11 +174,22 @@
                     <br>
                     <h3 style="font-weight: 300;">Let's create something together.</h3>
                 </div>
+                <div class="contact-me-left-container-email-holder">
+                    <div style="margin-left: 0; margin-right: 1rem;">
+                        <img src="imgs/icons8-mail-60.png" alt="" style="max-height: 3rem; width: auto; height: auto;">
+                    </div>
+                    <div style="display: block; position: relative;">
+                        <div style="position:relative; top:50%; transform: translateY(-50%);" id="email-adress-holder">
+                            <h3>Mail me at</h3>
+                            <a href="mailto:denizlg24@gmail.com" target="_blank">denizlg24@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="contact-me-right-container">
                 <div class="contact-me-form-holder">
                     <div class="contact-me-form-inside-holder">
-                        <form action="action_page.php">
+                        <form name="submit-to-google-sheet" onsubmit="return false;">
                             <h1 class="contact-me-big-text">Send us a message.🚀</h1>
                             <input type="text" id="fname" name="fullname" placeholder="Full name*" required >
                             <input type="email" id="email" name="emailadress" placeholder="Email address*" required>
@@ -186,17 +197,49 @@
                             <h3 class="contact-me-small-text">Tell us more about your project*</h3>
                             <textarea id="subject" name="subject" required></textarea>
                             <input type="submit" value="Send message">
-                          </form>
+                        </form>
                     </div>
                     <div class="contact-me-right-picture">
                         <img src="imgs/5124556.jpg" alt="" style="width: auto; height: auto; max-width: 100%; position: relative; top: 50%; left: 50%; transform: translate(-50%,-50%);">
                     </div>
                 </div>
-                
+                <div class="popup" id="popup">
+                    <span class="popuptext" id="success-popup" style="background-color: #acdfac;">Thank you your message was received!</span>
+                    <span class="popuptext" id="error-popup" style="background-color: #dfacac;">There was an error sending your message!</span>
+                </div>
             </div>
         </div>
     </section>
 </body>
 </html>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwrpe52ZCxl9kb3eXovS4eqdfjrLW__g7koCBpcPPuCMsRyBpG_gfT8tROW9S8pSdo12g/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    successPopup = document.getElementById("success-popup");
+    errorPopup = document.getElementById("error-popup");
+    form.addEventListener('submit', e => {
+      document.body.style.cursor='progress';
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            successPopup.classList.add("show");
+            document.body.style.cursor='default';
+            form.reset();
+            setTimeout(function() { 
+                successPopup.classList.remove("show");
+            }, 3000);
+        })
+        .catch(error => {
+            errorPopup.classList.add("show");
+            document.body.style.cursor='default';
+            form.reset();
+            setTimeout(function() { 
+                errorPopup.classList.remove("show");
+            }, 3000);
+        })
+        
+    })
+  </script>
+
 <script src="index.js"></script>
 

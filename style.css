@@ -561,6 +561,13 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
   }
 
 
+  #email-adress-holder a{
+    color: #7e2c9e;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
   .contact-me-main-container{
     width: calc(100% - 10rem); 
     height: auto; 
@@ -582,10 +589,25 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
     width: 90%; 
     height: auto; 
     position: relative; 
-    top: 30%; 
+    top: 25%; 
     left: 50%; 
     transform: translate(-50%,-50%); 
     color: white;
+  }
+
+  .contact-me-left-container-email-holder{
+    padding: 1.3rem 1.3rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin: 5rem 5rem;
+    margin-left: 2.5rem;
+    border-radius: .5rem;
+    width: fit-content;
+    display: flex;
+    background-color: white;
+    -moz-box-shadow: 0 0 1rem rgba(0, 0, 0,.3); 
+    -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0,.3); 
+    box-shadow: 0 0 1rem rgba(0, 0, 0,.3);
   }
 
   .contact-me-right-container{
@@ -593,7 +615,7 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
     float: right; 
     padding: auto; 
     background-color: #ffffff; 
-    border-radius: 5rem; 
+    border-radius: 3rem; 
     -moz-box-shadow: 0 0 2rem rgba(0, 0, 0,.3); 
     -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0,.3); 
     box-shadow: 0 0 2rem rgba(0, 0, 0,.3);
@@ -603,6 +625,7 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
     width: auto; 
     height: auto; 
     padding: 1rem 1rem;
+    transition: all .3s ease-in-out;
   }
 
   .contact-me-form-inside-holder{
@@ -660,15 +683,8 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
   }
   .contact-me-form-inside-holder input[type=submit]:hover{
     cursor: pointer;
-    color: black;
-    border: double 2px transparent;
-    border-radius: .5rem;
-    height: 4rem;
-    width: 12rem;
-    outline: none;
-    background-image: linear-gradient(#ebebeb, #ebebeb), radial-gradient(circle at top left, #1e08e0, #7e2c9e);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+    transform: scale(1.03);
+    transition: all ease-in-out .1s;
   }
 
 
@@ -714,6 +730,42 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
     margin-left: 0; 
     margin-top: 2rem;
 }
+
+.popup{
+    width: fit-content; 
+    height: auto; 
+    position: relative; 
+    text-align: center; 
+    color: #333333; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(50%);
+}
+
+.popuptext{
+    display: none;
+    padding: 1rem 1rem; 
+    border-radius: .5rem; 
+    font-weight: 500; 
+    font-size: 1rem;
+}
+
+.popup .show {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
 
 
 @media only screen and (max-width: 1420px) {
@@ -797,10 +849,30 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
 }
 
 @media only screen and (max-width: 990px) {
+    .popup{
+        width: 85%; 
+        height: auto; 
+        position: absolute; 
+        text-align: center; 
+        color: #333333; 
+        bottom: 0;  
+        transform: translateX(-50%) translateY(50%);
+    }
+    
+    .popuptext{
+        display: none; 
+        padding: 1rem 1rem; 
+        border-radius: .5rem; 
+        font-weight: 500; 
+        font-size:60%;
+    }
     .contact-me-right-container{
-        width: 100%; 
-        background-color: transparent;
-        border-radius: 5rem; 
+        width: auto; 
+        background-color: white;
+        border-radius: 2rem; 
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         -moz-box-shadow: 0 0 2rem rgba(0, 0, 0,0); 
         -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0,0); 
         box-shadow: 0 0 2rem rgba(0, 0, 0,0);
@@ -827,7 +899,6 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
     .contact-me-big-text{
         font-size: 2rem; 
         font-weight: 500; 
-        color: white; 
         margin: 0;
         margin-left: 0; 
         margin-bottom: 1.25rem;
@@ -836,7 +907,6 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
     .contact-me-small-text{
         font-size: 1rem; 
         font-weight: 400; 
-        color: white; 
         margin: .5rem; 
         margin-left: 0; 
         margin-top: 2rem;
