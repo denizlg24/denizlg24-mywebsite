@@ -871,6 +871,7 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
         background-color: white;
         border-radius: 2rem; 
         position: relative;
+        min-width: 280px;
         left: 50%;
         transform: translateX(-50%);
         -moz-box-shadow: 0 0 2rem rgba(0, 0, 0,0); 
