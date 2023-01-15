@@ -280,7 +280,29 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
     transform: scale(1.3);
 }
 */
-
+.linktree{
+    padding: 1rem 1rem;
+    width: fit-content;
+    border: double 2px transparent;
+    border-radius: .5rem;
+    outline: none;
+    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #1e08e0, #7e2c9e);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+}
+.linktree:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    border: double 2px transparent;
+    border-radius: .5rem;
+    outline: none;
+    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #1e08e0, #7e2c9e);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    transition: all .3s ease-in-out;
+}
 .about-me-main-holder{
     height: 100%; 
     display: flex; 
