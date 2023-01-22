@@ -868,6 +868,15 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
         border-radius: .75rem;
         transition: all ease-in-out .1s;
     }
+    .skill-title-holder{
+        width: 100%;
+        color: #3d3d3d;
+        text-align: center;
+        margin: 1rem 1rem 1rem 1rem;
+    }
+    .skill-desc-holder{
+        margin: auto;
+    }
 }
 
 @media only screen and (max-width: 990px) {
