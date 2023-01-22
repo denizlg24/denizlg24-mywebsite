@@ -162,7 +162,7 @@
                             var mid_wrapper = document.getElementById("mid_wrapper");
                             // Loop through the data and create the HTML code
                             for (var i = data.length-1; i >= 0; i--) {
-                                mid_wrapper.innerHTML += '<li>' + '<div class="content">' + '<h3>' + data[i].title + '</h3>' + '<p>' + data[i].descw + '</p>' + '<div class="time">' + '<h4>' + data[i].dt + '</h4>' + '</div>' + '</div>' + '</li>';
+                                mid_wrapper.innerHTML += '<li>' + '<div class="content">' + '<h3>' + data[i].title + '</h3>' + '<p>' + data[i].descw + '</p>' + '</div>'+ '<div class="time">' + '<h4>' + data[i].dt + '</h4>' + '</div>' + '</li>';
                             }
                             mid_wrapper.innerHTML += '<div style="clear:both;"></div>';
                         } else {
