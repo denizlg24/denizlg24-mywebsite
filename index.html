@@ -77,7 +77,7 @@
                     <br>
                     <a href="https://linktr.ee/denizlg24" target="_blank" style="color: black; text-decoration: none;">
                         <div class="linktree">
-                            <h3>Get in touch with me.</h3>
+                            <h3>Get all my links.</h3>
                         </div>
                     </a>
                     
@@ -150,28 +150,30 @@
         <section id="portfolio-trigger"></section>
         <h1 style="width: 100%; text-align: center; padding-top: 4rem; padding-bottom: 2rem; color: white; font-size: 3.5rem;">Let me tell you more about me and my work.</h1>
         <div class="timeline">
-            <ul>
-                <li>
-                    <div class="content">
-                      <h3>My First Steps in Academic Excelence</h3>
-                      <p>In 2014, at the end of my fourth grade of primary school, I was awarded an excellence award for my outstanding academic performance. This was a proud moment for me, as it recognized the hard work and dedication I had put into my studies. I knew that this was just the beginning, and I was motivated to continue striving for excellence in all my future endeavors.</p>
-                    </div>
-                    <div class="time">
-                      <h4>June 2014</h4>
-                    </div>
-                  </li>
-                <li>
-                <div class="content">
-                  <h3>The Beginning of My Journey</h3>
-                  <p>On April 24th, 2004, I was born in Cedofeita, Porto, Portugal. At the time, my father was working in London as an asset manager, while my mother was a university teacher in Portugal. As I entered the world, I was greeted with love and excitement, marking the start of my journey through life. Though I was just a newborn, I had the potential to accomplish anything I set my mind to, and my family was there to support me every step of the way.</p>
-                </div>
-                <div class="time">
-                  <h4>24th April 2004</h4>
-                </div>
-                </li>
-              <div style="clear:both;"></div>
+            <ul id="mid_wrapper">
+                <script>
+                    // Make an AJAX call to the PHP script
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'dados-portfolio.php', true);
+                    xhr.onload = function() {
+                        if (xhr.status === 200) {
+                            // Parse the JSON data
+                            var data = JSON.parse(xhr.responseText);
+                            var mid_wrapper = document.getElementById("mid_wrapper");
+                            // Loop through the data and create the HTML code
+                            for (var i = data.length-1; i >= 0; i--) {
+                                mid_wrapper.innerHTML += '<li>' + '<div class="content">' + '<h3>' + data[i].title + '</h3>' + '<p>' + data[i].descw + '</p>' + '<div class="time">' + '<h4>' + data[i].dt + '</h4>' + '</div>' + '</div>' + '</li>';
+                            }
+                            mid_wrapper.innerHTML += '<div style="clear:both;"></div>';
+                        } else {
+                            // Handle error
+                        }
+                    };
+                    xhr.send();
+                </script>
+                
             </ul>
-          </div>
+        </div>
     </section>
     <section style="height: auto; background-color: #495C83;">
         <section id="contact-trigger"></section>
@@ -217,6 +219,18 @@
                 <div class="popup" id="popup">
                     <span class="popuptext" id="success-popup" style="background-color: #acdfac;">Thank you your message was received!</span>
                     <span class="popuptext" id="error-popup" style="background-color: #dfacac;">There was an error sending your message!</span>
+                </div>
+            </div>
+            <div style="background-color: #0f0f0f; width: 100%; margin: 0; position: absolute; bottom: .5rem; left: 0; height: 4rem; display: flex; justify-content: center; -moz-box-shadow: 0 0 1rem rgba(0, 0, 0,.5); 
+            -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0,.5); 
+            box-shadow: 0 0 1rem rgba(0, 0, 0,.5);">
+                <a href="https://linktr.ee/denizlg24" target="_blank" style=" text-decoration: none;">
+                    <div class="linktree" style="color: black; margin: auto; margin-left: 1rem; float: left; position: absolute; left: 0; top: 50%; transform: translateY(-50%); padding: .3rem;">
+                        <h3 style="font-weight: 400; font-size: 1rem;">Get all my links.</h3>
+                    </div>
+                </a>
+                <div style="color: white; margin: auto; margin-right: 1rem; float: right; position: absolute; right: 0; top: 50%; transform: translateY(-50%); ">
+                    <h3 style="font-weight: 300; font-size: 1rem;">© 2023 Deniz Günes</h3>
                 </div>
             </div>
         </div>
