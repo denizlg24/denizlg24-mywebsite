@@ -24,7 +24,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         form {
             width: 50%;
             margin: 0 auto;
-            background-color: #e8fcfb;
+            background-color: #c3c2c4;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 2px 2px 10px #888888;

@@ -21,8 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO portfolio_data (title, dt, descw) VALUES ('$title', '$dt', '$desc') ORDER BY id ASC";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
+        header( "refresh:1;url=admin.php" );
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
+        header( "refresh:1;url=admin.php" );
     }
     $conn->close();
 }

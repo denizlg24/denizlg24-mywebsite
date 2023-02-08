@@ -449,7 +449,7 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
     position:absolute;
     left:50%;
     width:2px;
-    height: 100%;
+    height: 95%;
     background:#ffffff;
   }
   .timeline ul{
@@ -868,7 +868,7 @@ ul#navbar-mobile li a#active-tab-indicator-mobile{
         border-radius: .75rem;
         transition: all ease-in-out .1s;
     }
-    .skill-title-holder{
+     .skill-title-holder{
         width: 100%;
         color: #3d3d3d;
         text-align: center;

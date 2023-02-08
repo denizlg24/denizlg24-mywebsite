@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="stylesheet" href="style.css?ver=1">
+    <link rel="stylesheet" href="style.css?ver=2">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 </head>
 
@@ -143,6 +143,66 @@
                         <p>I learned game development around the time I learned C#, autonomously and I am now skilled in using Unity to create immersive, engaging games, and I have a strong understanding of game design principles. I enjoy using my skills in game development to create interactive and entertaining experiences for players.</p>
                     </div>
                 </div>
+                <div class="skill">
+            <div class="skill-picture-holder">
+              <img
+                src="imgs/icons8-react-native-512.png"
+                alt=""
+                style="height: auto; width: auto; margin: auto; max-height: 5em"
+              />
+            </div>
+            <div class="skill-title-holder">
+              <h1>React.js</h1>
+            </div>
+            <div class="skill-desc-holder">
+              <p>
+                I acquired my skills in React.js through autonomous learning and am
+                now experienced in creating dynamic web applications. My
+                expertise allows me to design visually appealing interfaces that
+                provide a seamless user experience.
+              </p>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-picture-holder">
+              <img
+                src="imgs/icons8-arduino-512.png"
+                alt=""
+                style="height: auto; width: auto; margin: auto; max-height: 5em"
+              />
+            </div>
+            <div class="skill-title-holder">
+              <h1>Arduino</h1>
+            </div>
+            <div class="skill-desc-holder">
+              <p>
+                I am skilled in using Arduino to build unique hardware projects,
+                due to me having a strong understanding of hardware and software
+                integration. My best project was back in 2019 when I built a throttle
+                quadrant for a flight simulator.
+              </p>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-picture-holder">
+              <img
+                src="imgs/tauri.png"
+                alt=""
+                style="height: auto; width: auto; margin: auto; max-height: 5em"
+              />
+            </div>
+            <div class="skill-title-holder">
+              <h1>Tauri</h1>
+            </div>
+            <div class="skill-desc-holder">
+              <p>
+                I learned Tauri autonomously to create visually appealing
+                applications that provide a smooth user experience. I learn how
+                to integrate it with react so that I could build frontend
+                solutions that would both work on web and desktop.
+              </p>
+            </div>
+          </div>
             </div>
         </div>
     </section>
@@ -164,14 +224,13 @@
                             for (var i = data.length-1; i >= 0; i--) {
                                 mid_wrapper.innerHTML += '<li>' + '<div class="content">' + '<h3>' + data[i].title + '</h3>' + '<p>' + data[i].descw + '</p>' + '</div>'+ '<div class="time">' + '<h4>' + data[i].dt + '</h4>' + '</div>' + '</li>';
                             }
-                            mid_wrapper.innerHTML += '<div style="clear:both;"></div>';
+                                mid_wrapper.innerHTML += '<div style="clear:both;"></div>';
                         } else {
                             // Handle error
                         }
                     };
                     xhr.send();
                 </script>
-                
             </ul>
         </div>
     </section>
